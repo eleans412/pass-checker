@@ -1,5 +1,6 @@
 import pytest
 # from src.calculate import 
+from src.error import input_error
 
 # Test calculations work with integer weightings
 def test_int_weightings():
