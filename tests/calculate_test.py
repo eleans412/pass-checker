@@ -1,6 +1,23 @@
 import pytest
-# from src.calculate import 
-from src.error import input_error
+from calculate import total_weigthing, total_marks, remaining_weighting, remaining_marks, desired_score
+from src.error import input_error, calculation_error
+
+# Test one weight
+def test_one_weight():
+    pass
+
+# Test one mark
+def test_one_mark():
+    pass
+
+# Test mutitple weightings
+def test_multiple_weight():
+    pass
+
+# Test mutitple marks
+def test_multiple_marks():
+    pass
+
 
 # Test calculations work with integer weightings
 def test_int_weightings():
@@ -11,6 +28,7 @@ def test_int_weightings():
         
     # 40 should be the resulting weight left - assert this
     # assert == 40.00
+    pass
 
 # Test calculations for float weightings
 def test_float_weightings():
@@ -21,6 +39,7 @@ def test_float_weightings():
         
     # 38.42 should be the resulting weight left - assert this
     # assert == 38.42
+    pass
 
 # Test passing mark result
 def test_pass_mark_simple():
@@ -44,7 +63,7 @@ def test_pass_mark_simple():
 
     # Grade needed to get 50 should be 24.0
     # assert == 24.0
-    
+    pass
 
 def test_pass_mark_floats():
     # Set up weights with 
@@ -67,8 +86,10 @@ def test_pass_mark_floats():
 
     # Grade needed to get 50 should be 22.5
     # assert == 22.5
+    pass
 
 # Test for invalid inputs
 def test_invalid_input():
     # with pytest raises(input_error):
         # asjkkffakllksf
+    pass
