@@ -93,3 +93,10 @@ def test_invalid_input():
     # with pytest raises(input_error):
         # asjkkffakllksf
     pass
+
+# Test calculation error in weighting
+def test_calculate_error():
+
+    #with pytest raises(calculation_error):
+        # 600
+    pass
