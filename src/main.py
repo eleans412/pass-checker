@@ -26,7 +26,7 @@ def main():
     total_marks(all_weights, names)
 
     # Calculate remining weighting
-    weight_left = remaining_weighting(all_weights)
+    weight_left = remaining_weighting(current_weight)
 
     # Get desired final mark
     desired_mark = desired_score()
@@ -34,7 +34,12 @@ def main():
     # Calculate remaining marks
     mark_left = remaining_marks(weight_left, current_weight, desired_mark)
 
-    # Print out the remaining marks
+    # If there are no remaining marks to get desired then print that
+    if mark_left == 0:
+        print_no_more()
+    else:
+        # Print out the remaining marks
+        print_remaining()
 
     # Print final message
     print('====================================================')
@@ -42,5 +47,18 @@ def main():
     print('====================================================\n')
 
 
+def print_no_more():
+    print('\n\n##################################################################')
+    print('You can relax, you have the mark you want already! :) ')
+    print('#################################################################\n')
+
+def print_remaining():
+    print('\n\n##################################################################')
+    print(f' You need to get at least {mark_left} to get {desired_mark}')
+    print('#################################################################\n')
+
 if __name__ == "__main__":
     main()
+
+
+
