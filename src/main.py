@@ -4,7 +4,7 @@ Takes in the weightings for courses or activity that the user inputs
 Calculates the total remaining grade or percentage needed to attain the desired mark
 '''
 
-from calculate import total_weigthing, total_marks, remaining_weighting, remaining_marks, desired_score
+from src.calculate import total_weigthing, total_marks, remaining_weighting, remaining_marks, desired_score
 
 
 def main():

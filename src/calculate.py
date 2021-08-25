@@ -1,4 +1,4 @@
-from error import input_error, calculation_error
+from src.error import input_error, calculation_error
 
 
 def total_weigthing():
@@ -18,6 +18,10 @@ def total_weigthing():
             break
         # Enter the name of the assignment and then enter weight
         name = input('Enter the name of the assignment: ')
+
+        if type(name) is not str:
+            raise(input_error)
+
         
         # If the user has finished inputting break from the loop
         if name.upper() == "DONE":
@@ -30,7 +34,10 @@ def total_weigthing():
         # Get the weight from the user
         weight = input("Enter weighting: ")
         print('If you have finished inputting weighting, type "DONE"\n')
-
+        
+        if type(weight) is not str:
+            raise(input_error)
+        
         # Check the type of what is being input
         if weight.isdigit():
 
@@ -60,6 +67,10 @@ def total_marks(weight_array, name_array):
         mark = input(f"Enter mark for {name}: ")
         print('If you have finished inputting your marks, type "DONE"\n')
 
+        if type(mark) is not str:
+            raise(input_error)
+
+
         # If user finished inputting, break from the loop
         if mark.upper() == "DONE":
             done = True
@@ -74,6 +85,9 @@ def total_marks(weight_array, name_array):
 
 def desired_score():
     score = input('Enter your desired final grade: ')
+    
+    if type(score) is not str:
+        raise(input_error)
 
     # if the score is not a digit then raise an error
     if score.isdigit():
@@ -93,7 +107,7 @@ def desired_score():
 def remaining_weighting(current_weight):
     
     remaining = 0
-    if current_weight is not 100:
+    if current_weight != 100:
         remaining = 100 - current_weight
     else:
         remaining = 0
